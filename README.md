@@ -56,7 +56,7 @@ Tambahkan screenshot aplikasi di sini.
 ### Home Page
 ![Home](screenshots/home.png)
 
-### Detail Artikel
+### Detail Bacaan
 ![Detail](screenshots/detail.png)
 
 ## 📋 Requirements
