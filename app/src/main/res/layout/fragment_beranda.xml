@@ -1,0 +1,104 @@
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header: Logo & Title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_logo_alribat"/> <!-- Ganti dengan asset anda -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Al Ribat"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_emerald"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Merawat Hati dengan Dzikir &amp; Shalawat"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Quote Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="#F8FDFB">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="&quot;Perbanyaklah bersholawat kepada Nabi Muhammad ﷺ&quot;"
+                    android:textSize="16sp"
+                    android:italic="true"
+                    android:textColor="@color/text_dark"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="- Dalail Khairot"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Menu Utama Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu Utama"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:textSize="18sp"/>
+
+        <!-- RecyclerView Grid -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false"/>
+
+        <!-- Jadwal Sholat Card -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jadwal Sholat"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:textSize="18sp"/>
+
+        <include layout="@layout/item_jadwal_sholat_card" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
